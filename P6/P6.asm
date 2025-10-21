@@ -89,7 +89,19 @@ _start:                     ;tell linker entry point
     ; G)
     mov [N], ax
 
+    mov ax, word [N]
+    call pHex_w
+
+    mov al, 10
+    call putchar 
+
     dec word [N]
+
+    mov ax, word [N]
+    call pHex_w
+
+    mov al, 10
+    call putchar 
 
     ; push a la pila de las banderas
     pushf 
@@ -100,6 +112,8 @@ _start:                     ;tell linker entry point
 	call putchar
 
     ; H)
+    ; reiniciamos ax para la pila
+    mov ax, 0
     pop ax
 
 	mov al,10
