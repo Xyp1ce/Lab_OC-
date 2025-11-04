@@ -83,3 +83,6 @@ _SumarVector: ; Procedimiento para sumar dos vectores almacenados en ebx y edx
     mov edx, array2
 
     ret
+
+_ProductoPunto: ; Procedimiento para calcular el producto punto de dos arreglos almacenados en ebx y edx
+    ret
